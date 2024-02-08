@@ -1,16 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:itinerary/mongodb.dart';
 import 'loginpage.dart';
 
-
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await MongoDatabase.connect();
-  
-
+Future main() async { 
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(apiKey: "AIzaSyCquQWPnec3fAy2sWNPw9825WrOBfmIqeA", authDomain: "flutter-app-b266d.firebaseapp.com",

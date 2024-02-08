@@ -29,6 +29,7 @@ class _LoginPageState extends State <LoginPage>{
         try{
           usercredential=await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password).then((value){
             Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+            return null;
           });
         }
         on FirebaseAuthException catch(ex){
