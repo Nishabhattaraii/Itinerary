@@ -44,6 +44,16 @@
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
+		<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to save photos to your device</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used to record audio</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to take pictures</string>
+
+	 <key>NSFileProtectionKey</key>
+    <string>NSFileProtectionNone</string>
+
 </dict>
 </plist>

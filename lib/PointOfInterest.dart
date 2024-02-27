@@ -1,5 +1,5 @@
 // point_of_interest.dart
-import 'package:flutter/material.dart';
+//flutteimport 'dart:convert';
 
 class PointOfInterest {
   final String locations;
@@ -9,6 +9,7 @@ class PointOfInterest {
   final String entryFee;
   final String timings;
   final String category;
+  // final List<String> category;
   final String descriptions;
 
   PointOfInterest({
@@ -31,10 +32,24 @@ class PointOfInterest {
       entryFee: json['Entry Fee'],
       timings: json['Timings'],
       category: json['category'],
+    // categories: List<String>.from(json['category']), // Change to List<String> 
       descriptions: json['Descriptions'],
     );
   }
-    static List<PointOfInterest> filterByCategory(List<PointOfInterest> pointsOfInterest, String category) {
+  
+  Map<String, dynamic> toJson() {
+    return {
+      'locations': locations,
+      'image': image,
+      'latitude': latitude,
+      'longitude': longitude,
+      'Entry Fee': entryFee,
+      'Timings': timings,
+      'category': category,
+      'Descriptions': descriptions,
+    };
+  /*  static List<PointOfInterest> filterByCategory(List<PointOfInterest> pointsOfInterest, String category) {
     return pointsOfInterest.where((poi) => poi.category ==category).toList();
-  }
+  }*/
+}
 }
