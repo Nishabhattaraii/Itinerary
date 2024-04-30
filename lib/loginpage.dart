@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:itinerary/Homepage.dart';
+// import 'package:itinerary/Homepage.dart';
+import 'package:itinerary/WelcomePage.dart';
 import 'package:itinerary/signuppage.dart';
 import 'package:itinerary/uihelper.dart';
 
@@ -28,7 +29,7 @@ class _LoginPageState extends State <LoginPage>{
         UserCredential? usercredential;
         try{
           usercredential=await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password).then((value){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
             return null;
           });
         }
